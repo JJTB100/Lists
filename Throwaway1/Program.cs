@@ -10,30 +10,37 @@ namespace Throwaway1
     {
         static void Main(string[] args)
         {
-            SayHello("English");
-            SayHello("German");
-            SayHello("French");
+            ShowOff();
+            Console.ReadLine();
+        }
 
-            
-            
+        private static void ShowOff()
+        {
+            List<string> languages = new List<string> { "English", "German", "French", "Yorkshire"};
+
+            foreach (string language in languages)
+            {
+                SayHello(language);
+            }
         }
         private static void SayHello(string language)
         {
-            
+
+            Console.Write($"You can say hello in {language} by saying: ");
 
             switch (language)
             {
                 case "English":
-                    Console.WriteLine("Hello");
+                    Console.WriteLine("\"Hello\"");
                     break;
                 case "German":
-                    Console.WriteLine("Guten Tag");
+                    Console.WriteLine("\"Guten \"");
                     break;
                 case "French":
-                    Console.WriteLine("Bonjour");
+                    Console.WriteLine("\"Bonjour\"");
                     break;
                 default:
-                    Console.WriteLine("Ay Up");
+                    Console.WriteLine("\"'Ay'up\"");
                     break;
 
             }
